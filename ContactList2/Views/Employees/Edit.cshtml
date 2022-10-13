@@ -1,0 +1,29 @@
+﻿@model List<ContactList2.Models.Domain.Employee>
+
+@{
+}
+
+<h1> Employees Contact_List </h1>
+
+<table class="table">
+
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Contact No.</th>
+            <th></th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var employee in Model){
+            <tr>
+                <td>@employee.Id</td>
+                <td>@employee.Name</td>
+                <td>@employee.ContactNo</td>
+                <td><a href="View/@employee.Id">View</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
